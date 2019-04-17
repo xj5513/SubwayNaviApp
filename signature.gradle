@@ -1,0 +1,37 @@
+apply from: '../config.gradle'
+
+ext {
+    storeFilePath = ""
+    keystorePasswordValue = ""
+    keyPasswordValue = ""
+
+    partnerStoreFilePath = ""
+    partnerKeystorePasswordValue = ""
+    partnerKeyPasswordValue = ""
+
+    alias = "subway"
+    appReleaseDir = ""
+    publish = false
+    publishDir = ""
+    archivesDir = ""
+    dev = false
+
+}
+
+loadProperties()
+
+def loadProperties() {
+    //加载资源
+    Properties properties = new Properties()
+    InputStream inputStream = project.rootProject.file('local.properties').newDataInputStream() ;
+    properties.load( inputStream )
+
+    storeFilePath = properties.storePath
+    keystorePasswordValue = properties.storePassword
+    keyPasswordValue = properties.keyPassword
+
+    appReleaseDir = properties.appReleaseDir
+    publish = properties.publish
+    publishDir = properties.publishDir
+    dev = properties.dev
+}

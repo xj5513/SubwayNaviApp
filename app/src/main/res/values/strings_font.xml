@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="icon_back">"\ue900"</string>
+    <string name="icon_check_store">"\ue901"</string>
+    <string name="icon_setting">"\ue902"</string>
+    <string name="icon_close">"\ue903"</string>
+    <string name="icon_complete">"\ue904"</string>
+    <string name="icon_car">"\ue905"</string>
+    <string name="icon_common_complete">"\ue906"</string>
+    <string name="icon_arrow_right">"\ue907"</string>
+    <string name="icon_pages">"\ue908"</string>
+    <string name="icon_triangle">"\ue90a"</string>
+    <string name="icon_multi_check">"\ue90b"</string>
+    <string name="icon_divide_done">"\ue904"</string>
+    <string name="icon_recheck_done">"\ue906"</string>
+    <string name="icon_arrow_down">"\ue90d"</string>
+    <string name="icon_search">"\ue913"</string>
+    <string name="icon_cancel">"\ue903"</string>
+    <string name="icon_pre_pick_surface">"\ue927"</string>
+    <!--入库小车-->
+    <string name="icon_inbound">"\ue90e"</string>
+    <!--入库完成-->
+    <string name="icon_inbound_complete">"\ue90f"</string>
+    <!--箱号-->
+    <string name="icon_box_nul">"\ue910"</string>
+    <!--栈板号-->
+    <string name="icon_pallet_num">"\ue912"</string>
+    <!--领取任务的YH标-->
+    <string name="icon_yh_task">"\ue911"</string>
+    <!--减号-->
+    <string name="icon_minus">"\ue914"</string>
+    <!--加号-->
+    <string name="icon_plus">"\ue915"</string>
+    <!--成品-->
+    <string name="icon_finish_product">"\ue916"</string>
+    <!--原料-->
+    <string name="icon_material">"\ue917"</string>
+    <!--对号-->
+    <string name="icon_hook">"\ue918"</string>
+    <!--叉叉-->
+    <string name="icon_fork">"\ue919"</string>
+    <!--盘点成功-->
+    <string name="icon_stock_take_complete">"\ue91a"</string>
+    <!--补货完成-->
+    <string name="icon_replenish_complete">"\ue91b"</string>
+    <!--新建完成-->
+    <string name="icon_new_complete">"\ue91c"</string>
+    <!--加工完成-->
+    <string name="icon_machining_complete">"\ue91d"</string>
+
+    <string name="icon_back_ios">"\ue91f"</string>
+
+    <!--移动完成-->
+    <string name="icon_move_complete">"\ue920"</string>
+    <!--单选框-->
+    <string name="icon_single_check">"\ue921"</string>
+    <!--报损-->
+    <string name="icon_report_damage">"\ue923"</string>
+    <!--领用-->
+    <string name="icon_received">"\ue924"</string>
+    <!--已确认-->
+    <string name="icon_confirmed">"\ue925"</string>
+    <!--有差异-->
+    <string name="icon_diff">"\ue926"</string>
+</resources>

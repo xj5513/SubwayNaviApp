@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">lib.base</string>
+
+    <string name="infrastructure">设施服务</string>
+    <string name="exit_info">出入口信息</string>
+    <string name="exit_map">出入口地面图</string>
+    <string name="surround_info">周边信息</string>
+</resources>

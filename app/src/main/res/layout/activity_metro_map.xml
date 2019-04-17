@@ -1,0 +1,142 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@color/black_a12"
+            android:layout_height="55dp">
+
+            <com.tfx.subwaynavi.libbase.widget.IconFont
+                android:id="@+id/mBtnBack"
+                android:text="@string/icon_back"
+                android:textColor="@color/black_a87"
+                android:textSize="18dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/mWebTitle"
+                android:layout_width="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/black_a87"
+                android:textSize="20dp"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/mLineSearch"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:background="@color/white"
+            android:layout_height="44dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/margin_15"
+                android:text="起点位置:"
+                android:textSize="@dimen/textSize_18"
+                android:layout_marginRight="@dimen/margin_10"
+                android:textColor="@color/black_a54"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/mSearchStart"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/border_button_input"
+                android:textSize="@dimen/textSize_18"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/margin_6"
+                android:maxLines="1"
+                android:maxLength="15"
+                android:imeOptions="actionDone"
+                android:layout_marginTop="@dimen/margin_6"
+                android:layout_marginBottom="@dimen/margin_5"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/margin_15"
+                android:text="终点位置:"
+                android:textSize="@dimen/textSize_18"
+                android:layout_marginRight="@dimen/margin_10"
+                android:textColor="@color/black_a54"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/mSearchEnd"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="@color/black_a54"
+                android:background="@drawable/border_button_input"
+                android:textSize="@dimen/textSize_18"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:maxLength="15"
+                android:imeOptions="actionDone"
+                android:paddingLeft="@dimen/margin_5"
+                android:layout_marginBottom="@dimen/margin_6"
+                android:layout_marginTop="@dimen/margin_6"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/mLineSearchBtn"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:paddingLeft="@dimen/margin_22"
+                android:paddingRight="@dimen/margin_22"
+                android:text="查询"
+                android:textSize="@dimen/textSize_18"
+                android:textColor="@color/white"
+                android:background="@color/primary"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/margin_6"
+                android:layout_marginBottom="@dimen/margin_6"
+                android:layout_height="match_parent" />
+
+
+        </LinearLayout>
+
+        <WebView
+            android:id="@+id/mMetroWebView"
+            android:layout_width="match_parent"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbars="vertical"
+            android:layerType="software"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/mMetroFloatingBtn"
+        android:layout_width="wrap_content"
+        android:layout_gravity="end|bottom"
+        app:elevation="6dp"
+        android:clickable="true"
+        app:borderWidth="0dp"
+        android:visibility="gone"
+        android:backgroundTint="#00b8d4"
+        app:rippleColor="#0097a7"
+        android:layout_marginBottom="32dp"
+        android:layout_marginRight="32dp"
+        android:src="@mipmap/icon_recognizer"
+        app:pressedTranslationZ="12dp"
+        android:layout_height="wrap_content"
+        />
+
+
+</FrameLayout>

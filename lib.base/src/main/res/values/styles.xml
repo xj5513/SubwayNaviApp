@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <style name="ToolBarStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/home_toolbar_height</item>
+        <item name="android:minHeight">@dimen/home_toolbar_height</item>
+        <item name="elevation">5dp</item>
+        <item name="titleTextAppearance">@style/ToolbarTitleTextStyle</item>
+    </style>
+
+    <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <item name="colorControlNormal">@android:color/white</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="contentInsetEnd">0dp</item>
+        <item name="contentInsetStartWithNavigation">0dp</item>
+        <item name="actionMenuTextColor">@color/white</item>
+        <item name="android:textSize">@dimen/textSize_18</item>
+    </style>
+
+    <style name="ToolbarTitleTextStyle" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">21sp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <!--全局loading-->
+    <style name="dialog_whole_loading" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimAmount">0.4</item>
+    </style>
+
+
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="statusBarTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <!--<item name="android:windowAnimationStyle">@style/ActivityTranslationStyle</item>-->
+        <item name="colorAccent">@color/assist_app_color</item>
+        <item name="colorPrimary">@color/toolbar_right_color</item>
+        <item name="android:lineSpacingMultiplier">1.1</item>
+        <item name="android:windowBackground">@color/base_background</item>
+        <item name="colorControlActivated">@color/assist_app_color</item>
+        <!--设置Button普通状态的颜色-->
+        <item name="actionButtonStyle">@style/ActionButton</item>
+        <item name="colorButtonNormal">@android:color/white</item>
+        <!--设置控件的焦点状态的颜色和普通状态的颜色-->
+        <item name="colorControlHighlight">@color/ripple_background</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="ActionButton" parent="@android:style/Widget.ActionButton">
+        <item name="android:drawablePadding">1dp</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+    </style>
+</resources>

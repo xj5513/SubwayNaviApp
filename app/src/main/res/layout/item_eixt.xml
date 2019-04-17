@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center_vertical"
+    android:paddingLeft="40dp"
+    android:paddingRight="@dimen/margin_25"
+    android:paddingBottom="@dimen/margin_5"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/exitName"
+        android:textSize="18dp"
+        android:textColor="@color/black_a87"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_2"
+        tools:text="B出口"
+        />
+
+    <TextView
+        android:id="@+id/exitInfo"
+        android:textSize="16dp"
+        android:textColor="@color/black_a54"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="@dimen/margin_2"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:layout_height="wrap_content"
+        tools:text="金顶南路"/>
+
+    <TextView
+        android:id="@+id/exitBus"
+        android:textSize="16dp"
+        android:textColor="@color/black_a87"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="@dimen/margin_2"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:layout_height="wrap_content"
+        tools:text="83路"/>
+
+</LinearLayout>

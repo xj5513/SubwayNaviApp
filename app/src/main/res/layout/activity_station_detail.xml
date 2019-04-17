@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/bg_app_color"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/mStationDetailPager"
+                android:background="@color/primary"
+                android:layout_width="match_parent"
+                android:alpha="0.8"
+                android:layout_height="100dp"/>
+
+            <LinearLayout
+                android:id="@+id/mLLInfrastructure"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:layout_marginTop="@dimen/margin_4"
+                android:layout_below="@+id/mStationDetailPager"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/mLayoutInfrastructure"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_height="44dp">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:src="@mipmap/icon_sc_paycode"
+                        android:layout_marginLeft="@dimen/margin_15"
+                        android:layout_height="22dp" />
+
+                    <TextView
+                        android:text="@string/infrastructure"
+                        android:textSize="18dp"
+                        android:textColor="@color/black_a54"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content" />
+
+                    <com.tfx.subwaynavi.libbase.widget.IconFont
+                        android:id="@+id/mInfrastructureShow"
+                        android:textColor="@color/black_a54"
+                        android:textSize="17dp"
+                        android:text="@string/icon_arrow_down"
+                        android:visibility="gone"
+                        android:layout_marginRight="@dimen/margin_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/mPlatformInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/mLLExit"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:layout_marginTop="@dimen/margin_4"
+                android:layout_below="@+id/mLLInfrastructure"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/mLayoutExit"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_height="44dp">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:src="@mipmap/icon_sc_orderlist"
+                        android:layout_marginLeft="@dimen/margin_15"
+                        android:layout_height="22dp" />
+
+                    <TextView
+                        android:text="@string/exit_info"
+                        android:textSize="18dp"
+                        android:textColor="@color/black_a54"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content" />
+
+                    <com.tfx.subwaynavi.libbase.widget.IconFont
+                        android:id="@+id/mExitShow"
+                        android:textColor="@color/black_a54"
+                        android:textSize="17dp"
+                        android:text="@string/icon_arrow_down"
+                        android:visibility="gone"
+                        android:layout_marginRight="@dimen/margin_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/mExitInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_below="@+id/mLLExit"
+                android:background="@color/white"
+                android:layout_marginTop="@dimen/margin_4"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/mStationExitMap"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_height="44dp">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:src="@mipmap/icon_map"
+                        android:layout_marginLeft="@dimen/margin_15"
+                        android:layout_height="25dp" />
+
+                    <TextView
+                        android:text="@string/surround_info"
+                        android:textSize="18dp"
+                        android:textColor="@color/black_a54"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content" />
+
+                    <com.tfx.subwaynavi.libbase.widget.IconFont
+                        android:text="@string/icon_arrow_right"
+                        android:layout_marginRight="@dimen/margin_10"
+                        android:textColor="@color/black_a26"
+                        android:textSize="18dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/black_a2"
+        android:alpha="0.7"
+        android:layout_height="55dp">
+
+        <com.tfx.subwaynavi.libbase.widget.IconFont
+            android:id="@+id/mStationDetailBack"
+            android:text="@string/icon_back"
+            android:textColor="@color/black_a54"
+            android:textSize="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/mStationDetailName"
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/black_a87"
+            android:textSize="20dp"
+            android:layout_height="wrap_content"
+            tools:text="安和桥"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+

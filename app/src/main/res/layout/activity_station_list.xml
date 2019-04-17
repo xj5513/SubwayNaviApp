@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/bg_app_color"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/mLLSearchView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:background="@color/white">
+
+        <com.tfx.subwaynavi.libbase.widget.IconFont
+            android:id="@+id/mBtnBack"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:textColor="@color/black_a54"
+            android:textSize="20dp"
+            android:text="@string/icon_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/mInputSearch"
+            android:hint="@string/search_input_hint"
+            android:textColorHint="@color/black_a26"
+            android:textColor="@color/black_a54"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/margin_15"
+            android:layout_gravity="center_vertical"
+            android:textSize="20dp"
+            android:maxLines="1"
+            android:maxLength="10"
+            android:drawablePadding="@dimen/margin_2"
+            android:background="@drawable/bg_shape_button_gray"
+            android:layout_marginLeft="@dimen/margin_12"
+            android:imeOptions="actionSearch"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp" />
+
+        <TextView
+            android:id="@+id/mBtnSearch"
+            android:layout_width="70dp"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:textColor="@color/black_a54"
+            android:text="@string/search"
+            android:layout_height="44dp" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/mStationListContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/mStationLocationType"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:textColor="@color/primary"
+            android:textSize="28sp" />
+
+        <com.tfx.subwaynavi.libbase.widget.QuickLocationBar
+            android:id="@+id/mStationLocationBar"
+            android:layout_width="@dimen/margin_40"
+            android:layout_height="300dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

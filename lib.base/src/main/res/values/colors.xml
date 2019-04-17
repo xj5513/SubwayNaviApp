@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--基本色-->
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00FFFFFF</color>
+    <!--global app bg color-->
+    <color name="bg_app_color">#F3F4F6</color>
+    <color name="lib_base_color">#fd7622</color>
+    <color name="lib_base_red">#EE1111</color>
+    <color name="lib_base_green">#FF589C3E</color>
+    <!--Dialog-->
+    <color name="tx_color">#888888</color>
+    <color name="dialog_whole_loading">#ff404040</color>
+
+    <!-- 1.5.0底部菜单选中后的字体颜色 -->
+    <color name="menu_font_hilight">#fd7622</color>
+
+    <!-- 通用组件波纹颜色-->
+    <color name="ripple_background">#ffd6d7d7</color>
+
+    <!--辅助色以及不同主题的标签色-->
+    <color name="assist_app_color">#049CDB</color>
+    <color name="select_container_pressed_color">#26049CDB</color>
+    <color name ="select_container_style_color">#8A000000</color>
+    <color  name ="select_print_color">#FFFFFFFF</color>
+    <color  name ="register_exception_color">#C7000000</color>
+
+    <!-- global -->
+    <color name="toolbar_background_color">#f9f9f9</color>
+    <color name="base_background">#fff3f4f6</color>
+    <color name="color_999999">#999999</color>
+    <color name="color_666666">#666666</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_FFF57B">#FFF57B</color>
+
+    <color name="black_a2">#05000000</color>
+    <color name="black_a12">#1F000000</color>
+    <color name="black_a20">#33000000</color>
+    <color name="black_a26">#42000000</color>
+    <color name="black_a38">#61000000</color>
+    <color name="black_a54">#8A000000</color>
+    <color name="black_a78">#C7000000</color>
+    <color name="black_a87">#DE000000</color>
+    <color name="toolbar_right_color">#5B65FF</color>
+    <color name="toolbar_left_color">#00CDFF</color>
+    <color name="progress_color">#FF049CDB</color>
+    <color name="inbound_type">#FF589C3E</color>
+    <color name="bg_retry_load">#08C3FF</color>
+    <color name="primary">#049CDB</color>
+</resources>

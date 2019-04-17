@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/home_ac"
+    >
+
+    <com.tfx.subwaynavi.libbase.widget.VerticalViewPager
+        android:id="@+id/mHomePager"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/mHomeStationList"
+            android:layout_width="wrap_content"
+            android:src="@mipmap/home_1"
+
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/mHomeStationTime"
+            android:layout_width="wrap_content"
+            android:src="@mipmap/home_2"
+            android:layout_toRightOf="@+id/mHomeStationList"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/mHomeLine"
+            android:layout_width="wrap_content"
+            android:src="@mipmap/home_3"
+            android:layout_toRightOf="@+id/mHomeStationTime"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/mHomeStationMap"
+            android:layout_width="wrap_content"
+            android:src="@mipmap/home_4"
+            android:layout_toRightOf="@+id/mHomeLine"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/mHomeVoice"
+            android:layout_width="wrap_content"
+            android:src="@mipmap/home_5"
+            android:layout_below="@+id/mHomeStationList"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/mHomeUpdate"
+            android:layout_width="wrap_content"
+            android:src="@mipmap/home_6"
+            android:layout_toRightOf="@+id/mHomeVoice"
+            android:layout_below="@+id/mHomeStationList"
+            android:layout_height="wrap_content" />
+
+
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:src="@mipmap/home_activity"
+        android:scaleType="fitXY"
+        android:visibility="gone"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/mHomeTitle"
+        android:layout_width="match_parent"
+        android:text="欢迎使用智能指路机"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:layout_marginTop="@dimen/margin_40"
+        android:gravity="center"
+        android:layout_height="wrap_content" />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@+id/mHomeTitle"
+        android:layout_marginTop="@dimen/margin_32"
+        android:id="@+id/mHomeList"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

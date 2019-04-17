@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">智能乘客指引系统</string>
+
+    <string name="search_input_hint">输入站名称</string>
+
+    <string name="search">搜索</string>
+
+    <string name="bus_info">公交&#160;&#160;:&#160;&#160;%1$s</string>
+</resources>

@@ -1,0 +1,33 @@
+def cmd = 'git rev-list HEAD --count'
+
+ext {
+    supportVersion = "27.0.0"
+    versionMajor = '1.0.1'
+    anko_version = '0.10.1'
+    versionPatch = 0
+    buildCount = 0
+    envValue = this.&getEnvValue
+}
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 26
+    }
+
+}
+
+def static getEnvValue(key, defValue) {
+    def val = System.getProperty(key)
+    if (null != val) {
+        return val
+    }
+    val = System.getenv(key)
+    if (null != val) {
+        return val
+    }
+    return defValue
+}

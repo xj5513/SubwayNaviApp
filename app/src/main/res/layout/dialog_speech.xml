@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+修改此文件请注意 连续上屏UE要求只能向上扩展，
+所以在AppWidgetTargetActivity中调整布局的方法adjustView会对布局进行修改，
+修改Root View 的 Gravity为Bottom，并计算设置PaddingBottom 以达到布局只向上扩展
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginLeft="@dimen/margin_32"
+    android:layout_marginRight="@dimen/margin_32"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_bg"
+    android:gravity="center" >
+
+    <com.tfx.subwaynavi.libbase.widget.IconFont
+        android:id="@+id/mSpeechBack"
+        android:text="@string/icon_close"
+        android:layout_alignParentRight="true"
+        android:textSize="22dp"
+        android:layout_marginTop="@dimen/margin_12"
+        android:layout_marginRight="@dimen/margin_15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="语音输入"
+        android:layout_marginTop="@dimen/margin_15"
+        android:textColor="@color/black_a87"
+        android:layout_centerHorizontal="true"
+        android:textSize="18dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/mSpeechHint"
+        android:text="规则：安定门到新街口"
+        android:textSize="16dp"
+        android:gravity="center"
+        android:layout_marginTop="65dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/mRlContent"
+        android:layout_marginTop="@dimen/margin_15"
+        android:layout_below="@+id/mSpeechHint"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="您输入的结果："
+            android:textColor="@color/black_a87"
+            android:textSize="16dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/mRecognizerResult"
+            android:textColor="@color/black_a54"
+            android:textSize="18dp"
+            android:layout_marginTop="@dimen/margin_2"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content" />
+
+        <com.tfx.subwaynavi.widget.SDKAnimationView
+            android:id="@+id/mVoiceView"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/mRlBottom"
+        android:layout_below="@+id/mRlContent"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/margin_15"
+        android:layout_height="50dp">
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/black_a12"
+            android:layout_height="1dp"/>
+        <TextView
+            android:id="@+id/mSpeechOver"
+            android:text="说完了"
+            android:textColor="@color/white"
+            android:background="@color/primary"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:id="@+id/mBottomResult"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:background="@color/bg_app_color"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/mSpeechConfirm"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="确认"
+                android:textSize="18dp"
+                android:gravity="center"
+                android:layout_height="match_parent" />
+
+            <View
+                android:layout_width="1dp"
+                android:background="@color/black_a12"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/mSpeechRetry"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="重试"
+                android:textColor="@color/white"
+                android:background="@color/primary"
+                android:textSize="18dp"
+                android:gravity="center"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:paddingLeft="40dp"
+    android:paddingRight="@dimen/margin_25"
+    android:paddingBottom="@dimen/margin_5"
+    android:paddingTop="@dimen/margin_5"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/mPlatformIcon"
+        android:layout_width="24dp"
+        android:scaleType="fitXY"
+        android:layout_marginTop="@dimen/margin_4"
+        android:layout_height="24dp" />
+
+    <TextView
+        android:id="@+id/mPlatformTitle"
+        android:layout_toRightOf="@+id/mPlatformIcon"
+        android:layout_marginLeft="@dimen/margin_15"
+        android:textColor="@color/black_a87"
+        android:textSize="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="卫生间"/>
+
+    <TextView
+        android:id="@+id/mPlatformContent"
+        android:layout_toRightOf="@+id/mPlatformIcon"
+        android:layout_below="@+id/mPlatformTitle"
+        android:layout_marginLeft="@dimen/margin_15"
+        android:layout_marginTop="@dimen/margin_2"
+        android:textColor="@color/black_a54"
+        android:textSize="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="开往南锣鼓巷方向车头"/>
+
+</RelativeLayout>

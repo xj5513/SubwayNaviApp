@@ -1,0 +1,70 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply from: '../config.gradle'
+apply from: '../signature.gradle'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.tfx.subwaynavi"
+
+
+        versionCode 1001
+        versionName "1.0.0.1"
+
+        externalNativeBuild {
+            cmake {
+                cppFlags ""
+            }
+        }
+        ndk {
+            abiFilters "armeabi"
+        }
+    }
+
+    signingConfigs {
+        release {
+            keyAlias alias
+            keyPassword keyPasswordValue
+            storeFile file(storeFilePath)
+            storePassword keystorePasswordValue
+            v2SigningEnabled false
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+
+        debug {
+            signingConfig signingConfigs.release
+        }
+    }
+    externalNativeBuild {
+//        cmake {
+//            path "CMakeLists.txt"
+//        }
+    }
+
+    packagingOptions{
+        doNotStrip "src/main/jniLibs/armeabi/libvad.dnn.so"
+        //doNotStrip "src/main/jniLibs/armeabi-v7a/libvad.dnn.so"
+        doNotStrip "src/main/jniLibs/armeabi/libBaiduSpeechSDK.so"
+        //doNotStrip "src/main/jniLibs/armeabi-v7a/libBaiduSpeechSDK.so"
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    compile project(':lib.base')
+    implementation files('libs/bdasr_V3_20180801_d6f298a.jar')
+}

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tfx.subwaynavi">
+
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icon_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/MetroAppTheme"
+        android:supportsRtl="true"
+        android:name=".SubwayApplication"
+        >
+
+        <activity android:name=".home.HomeActivity"
+            android:screenOrientation="landscape"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <activity android:name=".map.MetroMapActivity"
+            android:screenOrientation="landscape"/>
+
+        <activity android:name=".station.ui.StationListActivity"
+            android:screenOrientation="landscape"/>
+
+        <activity android:name=".station.ui.StationDetailActivity"
+            android:screenOrientation="landscape"/>
+
+        <activity android:name=".station.map.ActivityStationExitMap"
+            android:screenOrientation="landscape"/>
+
+        <activity android:name=".station.ui.SurroundActivity"
+            android:screenOrientation="landscape"/>
+
+        <activity android:name=".recognizer.RecognizerTestActivity"
+            android:screenOrientation="landscape">
+
+        </activity>
+
+
+
+        <!--百度语音识别-->
+        <service android:name="com.baidu.speech.VoiceRecognitionService" android:exported="false" />
+        <meta-data android:name="com.baidu.speech.APP_ID"
+            android:value="15343182" />
+        <meta-data
+            android:name="com.baidu.speech.API_KEY"
+            android:value="akBmbAOm9MjN4kTztMFv0i3h" />
+        <meta-data
+            android:name="com.baidu.speech.SECRET_KEY"
+            android:value="rlTIHV8nPxnvAzlMIktjpSTZHMoid27M" />
+
+    </application>
+
+</manifest>
